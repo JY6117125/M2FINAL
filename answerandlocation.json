@@ -1,0 +1,273 @@
+{
+    "usStates": {
+        "AL": { "name": "ALABAMA", "abbreviation": "AL", "location": [
+                32.318231,
+                -86.902298
+            ]
+        },
+        "AK": { "name": "ALASKA", "abbreviation": "AK", "location": [
+                63.588753,
+                -154.493062
+            ]
+        },
+
+        "AZ": { "name": "ARIZONA", "abbreviation": "AZ", "location": [
+                34.048928,
+                -111.093731
+            ]
+        },
+        "AR": { "name": "ARKANSAS", "abbreviation": "AR", "location": [
+                35.20105,
+                -91.831833
+            ]
+        },
+        "CA": { "name": "CALIFORNIA", "abbreviation": "CA", "location": [
+                36.778261,
+                -119.417932
+            ]
+        },
+        "CO": { "name": "COLORADO", "abbreviation": "CO", "location": [
+                39.550051,
+                -105.782067
+            ]
+        },
+        "CT": { "name": "CONNECTICUT", "abbreviation": "CT", "location": [
+                41.603221,
+                -73.087749
+            ]
+        },
+        "DC": { "name": "DISTRICT OF COLUMBIA", "abbreviation": "DC", "location": [
+                38.905985,
+                -77.033418
+            ]
+        },
+        "FM": { "name": "FEDERATED STATES OF MICRONESIA", "abbreviation": "FM", "location": [
+                38.910832,
+                -75.52767
+            ]
+        },
+        "FL": { "name": "FLORIDA", "abbreviation": "FL", "location": [
+                27.664827,
+                -81.515754
+            ]
+        },
+        "GA": { "name": "GEORGIA", "abbreviation": "GA", "location": [
+                32.157435,
+                -82.907123
+            ]
+        },
+
+        "HI": { "name": "HAWAII", "abbreviation": "HI", "location": [
+                19.898682,
+                -155.665857
+            ]
+        },
+        "ID": { "name": "IDAHO", "abbreviation": "ID", "location": [
+                44.068202,
+                -114.742041
+            ]
+        },
+        "IL": { "name": "ILLINOIS", "abbreviation": "IL", "location": [
+                40.633125,
+                -89.398528
+            ]
+        },
+        "IN": { "name": "INDIANA", "abbreviation": "IN", "location": [
+                40.551217,
+                -85.602364
+            ]
+        },
+        "IA": { "name": "IOWA", "abbreviation": "IA", "location": [
+                41.878003,
+                -93.097702
+            ]
+        },
+        "KS": { "name": "KANSAS", "abbreviation": "KS", "location": [
+                39.011902,
+                -98.484246
+            ]
+        },
+        "KY": { "name": "KENTUCKY", "abbreviation": "KY", "location": [
+                37.839333,
+                -84.270018
+            ]
+        },
+        "LA": { "name": "LOUISIANA", "abbreviation": "LA", "location": [
+                31.244823,
+                -92.145024
+            ]
+        },
+        "ME": { "name": "MAINE", "abbreviation": "ME", "location": [
+                45.253783,
+                -69.445469
+            ]
+        },
+
+        "MD": { "name": "MARYLAND", "abbreviation": "MD", "location": [
+                39.045755,
+                -76.641271
+            ]
+        },
+        "MA": { "name": "MASSACHUSETTS", "abbreviation": "MA", "location": [
+                42.407211,
+                -71.382437
+            ]
+        },
+        "MI": { "name": "MICHIGAN", "abbreviation": "MI", "location": [
+                44.314844,
+                -85.602364
+            ]
+        },
+        "MN": { "name": "MINNESOTA", "abbreviation": "MN", "location": [
+                46.729553,
+                -94.6859
+            ]
+        },
+        "MS": { "name": "MISSISSIPPI", "abbreviation": "MS", "location": [
+                32.354668,
+                -89.398528
+            ]
+        },
+        "MO": { "name": "MISSOURI", "abbreviation": "MO", "location": [
+                37.964253,
+                -91.831833
+            ]
+        },
+        "MT": { "name": "MONTANA", "abbreviation": "MT", "location": [
+                46.879682,
+                -110.362566
+            ]
+        },
+        "NE": { "name": "NEBRASKA", "abbreviation": "NE", "location": [
+                41.492537,
+                -99.901813
+            ]
+        },
+        "NV": { "name": "NEVADA", "abbreviation": "NV", "location": [
+                38.80261,
+                -116.419389
+            ]
+        },
+        "NH": { "name": "NEW HAMPSHIRE", "abbreviation": "NH", "location": [
+                43.193852,
+                -71.572395
+            ]
+        },
+        "NJ": { "name": "NEW JERSEY", "abbreviation": "NJ", "location": [
+                40.058324,
+                -74.405661
+            ]
+        },
+        "NM": { "name": "NEW MEXICO", "abbreviation": "NM", "location": [
+                34.97273,
+                -105.032363
+            ]
+        },
+        "NY": { "name": "NEW YORK", "abbreviation": "NY", "location": [
+                43.299428,
+                -74.217933
+            ]
+        },
+        "NC": { "name": "NORTH CAROLINA", "abbreviation": "NC", "location": [
+                35.759573,
+                -79.0193
+            ]
+        },
+        "ND": { "name": "NORTH DAKOTA", "abbreviation": "ND", "location": [
+                47.551493,
+                -101.002012
+            ]
+        },
+
+        "OH": { "name": "OHIO", "abbreviation": "OH", "location": [
+                40.417287,
+                -82.907123
+            ]
+        },
+        "OK": { "name": "OKLAHOMA", "abbreviation": "OK", "location": [
+                35.007752,
+                -97.092877
+            ]
+        },
+        "OR": { "name": "OREGON", "abbreviation": "OR", "location": [
+                43.804133,
+                -120.554201
+            ]
+        },
+
+        "PA": { "name": "PENNSYLVANIA", "abbreviation": "PA", "location": [
+                41.203322,
+                -77.194525
+            ]
+        },
+        "PR": { "name": "PUERTO RICO", "abbreviation": "PR", "location": [
+                18.220833,
+                -66.590149
+            ]
+        },
+        "RI": { "name": "RHODE ISLAND", "abbreviation": "RI", "location": [
+                41.580095,
+                -71.477429
+            ]
+        },
+        "SC": { "name": "SOUTH CAROLINA", "abbreviation": "SC", "location": [
+                33.836081,
+                -81.163725
+            ]
+        },
+        "SD": { "name": "SOUTH DAKOTA", "abbreviation": "SD", "location": [
+                43.969515,
+                -99.901813
+            ]
+        },
+        "TN": { "name": "TENNESSEE", "abbreviation": "TN", "location": [
+                35.517491,
+                -86.580447
+            ]
+        },
+        "TX": { "name": "TEXAS", "abbreviation": "TX", "location": [
+                31.968599,
+                -99.901813
+            ]
+        },
+        "UT": { "name": "UTAH", "abbreviation": "UT", "location": [
+                39.32098,
+                -111.093731
+            ]
+        },
+        "VT": { "name": "VERMONT", "abbreviation": "VT", "location": [
+                37.431573,
+                -78.656894
+            ]
+        },
+        "VI": { "name": "VIRGIN ISLANDS", "abbreviation": "VI", "location": [
+                47.751074,
+                -120.740139
+            ]
+        },
+        "VA": { "name": "VIRGINIA", "abbreviation": "VA", "location": [
+                44.558803,
+                -72.577841
+            ]
+        },
+        "WA": { "name": "WASHINGTON", "abbreviation": "WA", "location": [
+            47.751074,-120.740139
+        ]
+    },
+        "WV": { "name": "WEST VIRGINIA", "abbreviation": "WV", "location": [
+                38.597626,
+                -80.454903
+            ]
+        },
+        "WI": { "name": "WISCONSIN", "abbreviation": "WI", "location": [
+                43.78444,
+                -88.787868
+            ]
+        },
+        "WY": { "name": "WYOMING", "abbreviation": "WY", "location": [
+                43.075968,
+                -107.290284
+            ]
+        }
+    }
+}

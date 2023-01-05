@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+        let img;
+        var data;
+
+function preload() {
+ // img = loadImage('33-23.png');
+    var useranswerlist=[] 
+    function preload(){
+        data=loadJSON("data.json");
+      //  img = loadImage('33-23.png');//loading-map
+    }
+}
+function setup() {
+createCanvas(800,600);
+background(200);
+ // image(img, 0, 0);
+}
+function draw(){
+    var data;
+    text(data[0].firstName,150,105);
+}
+ // 经纬度转地图坐标
+
+      </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+
+</body>
+</html>

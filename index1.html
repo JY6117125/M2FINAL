@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<style>
+#li{
+    cursor: move;
+}
+    
+</style>
+<body>
+<div id="AnswersListblock" >
+    <h1 id="header" >
+        Your Answers List
+    </h1>
+</div>
+<p draggable="true">
+    123
+<ul id="userlist">
+    <li draggable="true"> nothing, yet</li>
+</ul>
+</p>
+    
+<script>
+    var data
+    var useranswerlist=[] 
+    function preload(){
+        data=loadJSON("answerandlocation.json");
+        img = loadImage('33-23.png');//loading-map
+    }
+    function setup() {
+  // create canvas
+        createCanvas(1000, 446);   
+        image(img, 75, 70,650,346);
+        input = createInput();
+        input.position(450, 65);
+
+        button = createButton('Check');
+        button.position(input.x + input.width, 65);
+        button.mousePressed(checkabbreviation);
+        greeting = createElement('h5', 'State name and abbreviation');
+        greeting.position(450, 15);
+
+}
+//checking answer AND store it into user answer list
+function checkabbreviation() {
+  const name = input.value();
+  if (Object.keys(data.usStates).includes(name)){
+    greeting.html('Your anwer is right ' + name + '!');
+    if(!useranswerlist.includes(name) ){
+    useranswerlist.push(name);
+     let newstateitem=document.createElement('li');
+     newstateitem.textContent = name;
+     newstateitem.setAttribute=('id',"draggable");
+     newstateitem.setAttribute=("draggable","true");
+
+     userlist.appendChild(newstateitem)
+    }
+    }
+  else { greeting.html('Try again');
+    }
+}
+
+// class state {
+//     constructor(abbreviation) {
+//    // this.abbreviation= abbreviation;
+//    // this.name= name;
+//    this.abbreviation=abbreviation
+//     }
+//     convertx(){
+//         console.log(data.usStates.this.abbreviation.location[0]);
+//         return 
+//     }
+// }
+// const ca=new state("CA")
+// console.log(ca.convertx())
+
+
+
+function draw() {
+        text(data.usStates.CA.name,50,200)
+        text(data.usStates.TX.name,data.usStates.TX.location[0],data.usStates.TX.location[1])
+        text(data.usStates.WA.name,data.usStates.WA.location[0],data.usStates.WA.location[1])
+        text(data.usStates.ME.name,data.usStates.ME.location[0],data.usStates.ME.location[1])
+
+        // 坐标x
+        console.log(convert(31.968599,-99.901813))
+        text("ME",
+692.9040805555555,110.87118212222222)
+        text("WA", 164.610725, 104.68344997777777)
+        text("TX",  222.49496388888886, 143.7889158111111)
+
+        const userlist = document.getElementById('userlist')
+    }
+
+
+MAP_WIDTH = 1000;
+MAP_HEIGHT = 446;
+function convert(lat, lon){
+    var y = ((-1 * lat) + 90) * (MAP_HEIGHT / 180);
+    var x = (lon + 180) * (MAP_WIDTH / 360);
+    return [x,y];
+}
+
+</script>
+
+</script><script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+</body>
+</html>
