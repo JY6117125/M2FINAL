@@ -64,6 +64,20 @@ main{
 
 </div>
 <script>
+    class state {
+    constructor(abbreviation) {
+   // this.abbreviation= abbreviation;
+   // this.name= name;
+   this.abbreviation=abbreviation
+    }
+    convertx(){
+       
+       console.log(data["usStates"][this.abbreviation]["location"][0]);
+    }
+         
+    }
+
+
     var data
     var useranswerlist=[] 
     function preload(){
@@ -82,7 +96,8 @@ main{
         button.mousePressed(checkabbreviation);
         greeting = createElement('h5', 'State name and abbreviation');
         greeting.position(630, 25);
-
+        const ca=new state("CA")
+        ca.convertx()
 }
 //checking answer AND 
 function checkabbreviation() {
@@ -103,7 +118,7 @@ function sdattrb(){
      useranswerlist.push(name);
      let newstateitem=document.createElement('li');
      newstateitem.textContent = name;
-     newstateitem.setAttribute('class',"draggable");
+     newstateitem.setAttribute("class","draggable");
      newstateitem.setAttribute("draggable","true");
 //appending the user input into a list
      userlist.appendChild(newstateitem)
@@ -124,47 +139,33 @@ draganddrowarea.forEach(defaultCanvas0 =>{
     )
 })
 
-// class state {
-//     constructor(abbreviation) {
-//    // this.abbreviation= abbreviation;
-//    // this.name= name;
-//    this.abbreviation=abbreviation
-//     }
-//     convertx(){
-//         let consolesing= () => {
-//         data.usStates.this.abbreviation.location[0];}
-         
-//     }
-// }
-// const ca=new state("CA")
-// ca.convertx()
+
 
 
 
 function draw() {
-        text(data.usStates.CA.name,50,200)
-        text(data.usStates.TX.name,data.usStates.TX.location[0],data.usStates.TX.location[1])
-        text(data.usStates.WA.name,data.usStates.WA.location[0],data.usStates.WA.location[1])
-        text(data.usStates.ME.name,data.usStates.ME.location[0],data.usStates.ME.location[1])
+        text(data.usStates.CA.name,200,200)
+        // text(data.usStates.AR.name,data.usStates.AR.location[0],data.usStates.TX.location[1])
+        // text(data.usStates.WA.name,data.usStates.WA.location[0],data.usStates.WA.location[1])
+        // text(data.usStates.ME.name,data.usStates.ME.location[0],data.usStates.ME.location[1])
 
         // 坐标x
         // console.log(convert(31.968599,-99.901813))
-        text("ME",
-692.9040805555555,110.87118212222222)
+        text("ME",692.9040805555555,110.87118212222222)
         text("WA", 164.610725, 104.68344997777777)
         text("TX",  222.49496388888886, 143.7889158111111)
 
         const userlist = document.getElementById('userlist')
     }
 
-
-MAP_WIDTH = 1000;
-MAP_HEIGHT = 446;
-function convert(lat, lon){
-    var y = ((-1 * lat) + 90) * (MAP_HEIGHT / 180);
-    var x = (lon + 180) * (MAP_WIDTH / 360);
-    return [x,y];
-}
+// conver the lat and lon to the web map(x,y)
+// MAP_WIDTH = 1000;
+// MAP_HEIGHT = 446;
+// function convert(lat, lon){
+//     var y = ((-1 * lat) + 90) * (MAP_HEIGHT / 180);
+//     var x = (lon + 180) * (MAP_WIDTH / 360);
+//     return [x,y];
+// }
 
 </script>
 

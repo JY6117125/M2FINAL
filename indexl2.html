@@ -5,35 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+
 </head>
 <body>
 
 <script>
-        let img;
-        var data;
+class stateinfo {
+  constructor(abbreviations) {
+    this.abbreviations = abbreviations;
+  }
+    statelo(){
+    console.log(data["usStates"][this.abbreviations]["location"][0]);
+    return rx=data["usStates"][this.abbreviations]["location"][0],ry=data["usStates"][this.abbreviations]["location"][1]
+  }
+}
+let input, button, greeting,abbreviation,data,x=50,y=50,lockxy,rx,ry;
 
-function preload() {
- // img = loadImage('33-23.png');
-    var useranswerlist=[] 
-    function preload(){
-        data=loadJSON("data.json");
-      //  img = loadImage('33-23.png');//loading-map
+
+function setup() {
+    data=loadJSON("answerandlocation.json");
+    createCanvas(850, 650);
+    img = loadImage('33-23.png'); // Load the image
+    background(img);
+    checkab();
+    const state=new stateinfo("CA");
+    state.statelo();
+}
+
+function checkab(){
+    input = createInput();
+    input.position(850, 95);
+     button = createButton('submit');
+     button.position(input.x + input.width, 95);
+    button.mousePressed(checkabbreviation);
+    greeting = createElement('h3', "Input the State's abbreviation ");
+    greeting.position(850, 5);
+    textAlign(CENTER);
+    textSize(10);
+}
+
+function checkabbreviation() {
+    abbreviation = input.value();
+    if (Object.keys(data.usStates).includes(abbreviation)){
+    greeting.html('Your anwer is right ' + abbreviation + '!');  
+    return abbreviation
+    }
+    else { greeting.html('Try again!');
+    input.value('');
     }
 }
-function setup() {
-createCanvas(800,600);
-background(200);
- // image(img, 0, 0);
-}
-function draw(){
-    var data;
-    text(data[0].firstName,150,105);
-}
- // 经纬度转地图坐标
 
-      </script>
+
+// function mouseMoved(event) {
+//   if  (lockxy==true||lockxy!==false){
+//   x=mouseX,y=mouseY;}
+// }
+// function doubleClicked (event) {
+//    return lockxy=false;
+// }
+// function  mouseClicked(event) {   
+//   return lockxy=true,x=mouseX,y=mouseY
+// }
+function mouseDragged(event) {
+    x=mouseX,y=mouseY;
+}
+function mouseReleased(event) {
+    checkxy()  
+    }
+function checkxy() {
+   if(x!==rx+10&&y!==ry+10&&x!==rx-10&&y!==ry-10){//remove the "!" after import the data from json 
+    greeting.html('good job')
+   }
+   else {"try again"}
+}
+
+function draw() {
+    image(img, 0, 0);
+    text(abbreviation,x ,y);
+
+}
     
-<script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+</script>
 
 </body>
 </html>
