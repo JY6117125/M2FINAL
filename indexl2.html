@@ -12,54 +12,60 @@
 
 <script>
 class stateinfo {
-  constructor(abbreviations) {
-    this.abbreviations = abbreviations;
+  constructor(abbreviation) {
+    this.abbreviation = abbreviation
   }
     statelo(){
-    console.log(data["usStates"][this.abbreviations]["location"][0]);
-    return rx=data["usStates"][this.abbreviations]["location"][0],ry=data["usStates"][this.abbreviations]["location"][1]
+    console.log(data["usStates"][this.abbreviation]["location"][0]);
+    return rx=data["usStates"][this.abbreviation]["location"][0],ry=data["usStates"][this.abbreviation]["location"][1];
   }
 }
-let input, button, greeting,abbreviation,data,x=50,y=50,lockxy,rx,ry;
 
-
-function setup() {
+let input, button, greeting,abbreviationS,data,x=850,y=150,lockxy,rx,ry;
+function preload(){
     data=loadJSON("answerandlocation.json");
-    createCanvas(850, 650);
-    img = loadImage('33-23.png'); // Load the image
-    background(img);
-    checkab();
-    const state=new stateinfo("CA");
-    state.statelo();
+
 }
 
-function checkab(){
+function setup() {
+    // data=loadJSON("answerandlocation.json");
+    createCanvas(1050, 650);
+    img = loadImage('33-23.png'); // Load the image
+    background(img);
+    inputab();
+
+}
+
+function inputab(){
     input = createInput();
     input.position(850, 95);
-     button = createButton('submit');
-     button.position(input.x + input.width, 95);
+    button = createButton('submit');
+    button.position(input.x + input.width, 95);
     button.mousePressed(checkabbreviation);
     greeting = createElement('h3', "Input the State's abbreviation ");
     greeting.position(850, 5);
     textAlign(CENTER);
-    textSize(10);
+    textSize(15);
 }
 
 function checkabbreviation() {
-    abbreviation = input.value();
-    if (Object.keys(data.usStates).includes(abbreviation)){
-    greeting.html('Your anwer is right ' + abbreviation + '!');  
-    return abbreviation
+    abbreviationS = input.value();
+    if (Object.keys(data.usStates).includes(abbreviationS)){
+    greeting.html('Your anwer is right ' + abbreviationS + '!');  
+    input.value('');
+    const testabbreviation=new stateinfo(abbreviationS);
+    testabbreviation.statelo();
+    return abbreviationS
     }
-    else { greeting.html('Try again!');
+    else {greeting.html('Try again!');
     input.value('');
     }
 }
 
-
+// let zuob
 // function mouseMoved(event) {
-//   if  (lockxy==true||lockxy!==false){
-//   x=mouseX,y=mouseY;}
+//     text(mouseX,50,50)
+
 // }
 // function doubleClicked (event) {
 //    return lockxy=false;
@@ -70,20 +76,19 @@ function checkabbreviation() {
 function mouseDragged(event) {
     x=mouseX,y=mouseY;
 }
-function mouseReleased(event) {
-    checkxy()  
+function doubleClicked(event) {
+    checkxy();  
     }
 function checkxy() {
-   if(x!==rx+10&&y!==ry+10&&x!==rx-10&&y!==ry-10){//remove the "!" after import the data from json 
+   if(x<=rx+5&&y<=ry+5&&x>=rx-5&&y>=ry-5){//remove the "!" after import the data from json 
     greeting.html('good job')
    }
-   else {"try again"}
+    else {greeting.html("try again")}
 }
 
 function draw() {
     image(img, 0, 0);
-    text(abbreviation,x ,y);
-
+    text(abbreviationS,x ,y);
 }
     
 </script>
